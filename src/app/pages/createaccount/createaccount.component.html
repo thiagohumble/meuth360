@@ -9,15 +9,15 @@
 			<div>Preencha seus dados para ter acesso</div>
 		</section>
 
-		<form action="">
-			<label for="nome">Nome</label>
-			<input type="text" id="nome" placeholder="Digite Nome">
-			<label for="Email">Email</label>
-			<input type="text" id="email" placeholder="Digite Email">
-			<label for="senha">Senha</label>
-			<input type="text" id="telefone" placeholder="Senha">
+		<form [formGroup]="accountForm">
+			<label for="name">Nome</label>
+			<input type="text" id="name" placeholder="Digite Nome" formControlName="name">
+			<label for="email">Email</label>
+			<input type="text" id="email" placeholder="Digite Email" formControlName="email">
+			<label for="psw">Senha</label>
+			<input type="text" id="psw" placeholder="psw" formControlName="psw">
 			<label for="senha">Confirmação de Senha</label>
-			<input type="text" id="repita" placeholder="Repita">
+			<input type="text" id="pswAgain" placeholder="pswAgain" formControlName="pswAgain">
 			<div class="input-container">
 				<span class=""><input type="checkbox" name="termo" ></span>	 Eu aceito os Termos de uso e o Contrato		
 			</div>
