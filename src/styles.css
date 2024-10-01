@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Zen+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+
+body {
+	background: linear-gradient(180deg, #3D8BFD 0%, #ffffff 100%);
+	margin: 0;
+	min-height: 100vh;
+}
+
+.button {
+  width: 196px;
+  height: 41px;
+  padding: 6px, 12px;
+  border-radius: 4px;
+  border: 1px;
+  gap: 8px;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.button {
+  color:#0D6EFD;
+  background-color: #FFFFFF;
+  border: 1px solid #0D6EFD;
+  cursor: pointer;
+}
