@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-company-registration',
   standalone: true,
   imports: [
+    CommonModule,
     ContainerComponent,
     ReactiveFormsModule
   ],
@@ -27,9 +29,9 @@ export class CompanyRegistrationComponent {
       city: new FormControl(''),
       complement: new FormControl(''),
       mobile: new FormControl('', [Validators.required, Validators.pattern(new RegExp("[0-9 ]{12}"))]),
-      adm: new FormControl(''),
+      adm: new FormControl('', Validators.required),
       cpf: new FormControl(''),
-      email: new FormControl('')
+      email: new FormControl('', [Validators.required, Validators.email])
     })
   }
 

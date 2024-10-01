@@ -110,13 +110,13 @@ input:focus {
   justify-content: space-between;
 }
 
-.botao-salvar {
+.salve-button {
   color:#FFFFFF;
   background-color: #0D6EFD;
   cursor: pointer;
 }
 
-.button-desabled {
+.desabled-button {
   background-color: #ADB5BD;
   cursor:not-allowed;
 }
