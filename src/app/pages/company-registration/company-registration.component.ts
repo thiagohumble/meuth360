@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../componentes/container/container.component';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-company-registration',
@@ -17,23 +17,27 @@ export class CompanyRegistrationComponent {
 
   constructor() {
     this.formContact = new FormGroup({
-      companyType: new FormControl('mkt'),
-      companyName: new FormControl('thumble mkt digital'),
-      cpnj: new FormControl('444444444444'),
-      cep: new FormControl('00000000'),
-      address: new FormControl('rua Bruno CF'),
-      neighborhood: new FormControl('vila prudente'),
-      state: new FormControl('SP'),
-      city: new FormControl('SP'),
-      complement: new FormControl('61A'),
-      mobile: new FormControl('9999999-9999'),
-      adm: new FormControl('Thumble'),
-      cpf: new FormControl('999999999-99'),
-      email: new FormControl('thg.humble@gmail.com')
+      companyType: new FormControl(''),
+      companyName: new FormControl('', Validators.required),
+      cpnj: new FormControl('', Validators.required),
+      cep: new FormControl(''),
+      address: new FormControl(''),
+      neighborhood: new FormControl(''),
+      state: new FormControl(''),
+      city: new FormControl(''),
+      complement: new FormControl(''),
+      mobile: new FormControl('', [Validators.required, Validators.pattern(new RegExp("[0-9 ]{12}"))]),
+      adm: new FormControl(''),
+      cpf: new FormControl(''),
+      email: new FormControl('')
     })
   }
 
   sendForm() {
-    console.log(this.formContact.value)
+    if(this.formContact.valid){
+      console.log(this.formContact.value)
+    } else {
+      console.log('error')
+    }
   }
 }

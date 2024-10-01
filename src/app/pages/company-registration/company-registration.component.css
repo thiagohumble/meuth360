@@ -126,3 +126,8 @@ input:focus {
   color: red;
   margin-bottom: 12px;
 }
+
+span {
+  font-size: 10px;
+  color: gray;
+}
