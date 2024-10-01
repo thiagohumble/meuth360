@@ -2,9 +2,19 @@
 	<form [formGroup]="formContact" (ngSubmit)="sendForm()">
 		<label for="companyType">Tipo de empresa</label>
 		<input type="text" id="companyType" placeholder="" formControlName="companyType">
-		<label for="companyName">Nome da Empresa*</label>
+		<label for="companyName">
+			Nome da Empresa* 
+				@if (formContact.get('companyName')?.errors && formContact.get('companyName')?.touched) {
+					<span class="message-error">Obrigatório</span>
+				}
+		</label>
 		<input type="text" id="companyName" placeholder="" formControlName="companyName">
-		<label for="cpnj">CNPJ*</label>
+		<label for="cpnj">
+			CNPJ* 
+				@if (formContact.get('cpnj')?.errors && formContact.get('cpnj')?.touched) {
+					<span class="message-error">Obrigatório</span>
+				}
+		</label>
 		<input type="text" id="cpnj" placeholder="" formControlName="cpnj">
 		<label for="cep">Cep</label>
 		<input type="text" id="cep" placeholder="" formControlName="cep">
@@ -23,13 +33,31 @@
 		<br>	
 		<label for="complement">complemento</label>
 		<input type="text" id="complement" placeholder="" formControlName="complement">
-		<label for="mobile">Celular* <span>11 988888888</span></label>
+		<label for="mobile">
+			Celular* <span>11 988888888</span>
+				@if (formContact.get('mobile')?.errors && formContact.get('mobile')?.touched) {
+					<span class="message-error"> Obrigatório</span>
+				}
+		</label>
 		<input type="text" id="mobile" placeholder="" formControlName="mobile">
-		<label for="adm">administrador*</label>
+		<label for="adm">
+			Administrador* 
+			@if (formContact.get('adm')?.errors && formContact.get('adm')?.touched) {
+				<span class="message-error">Obrigatório</span>
+			}
+		</label>
 		<input type="text" id="adm" placeholder="" formControlName="adm">
 		<label for="cpf">CPF</label>
 		<input type="text" id="cpf" placeholder="" formControlName="cpf">
-		<label for="email">E-mail*</label>
+		<label for="email">
+			E-mail*
+				@if (formContact.get('email')?.errors?.['required'] && formContact.get('email')?.touched) {
+					<span class="message-error">Obrigatório</span>
+				}
+				@if (formContact.get('email')?.errors?.['email'] && formContact.get('email')?.touched) {
+					<span class="message-error">Formato email inválido</span>
+				}
+		</label>
 		<input type="text" id="email" placeholder="" formControlName="email">
 
 		<section class="buttons">
@@ -40,6 +68,6 @@
 				Salvar
 			</button>
 		</section>
-
 	</form>
+	<p class="message-error">*Campos obrigatórios</p>
 </app-container>
