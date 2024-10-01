@@ -23,4 +23,10 @@ export class CreateaccountComponent {
       pswAgain: new FormControl('Thiago')
     })
   }
+
+  sendForm() {
+    console.log(this.accountForm.value)
+  }
+
+  
 }

@@ -32,4 +32,8 @@ export class CompanyRegistrationComponent {
       email: new FormControl('thg.humble@gmail.com')
     })
   }
+
+  sendForm() {
+    console.log(this.formContact.value)
+  }
 }
