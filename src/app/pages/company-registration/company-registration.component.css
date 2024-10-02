@@ -109,25 +109,3 @@ input:focus {
   display: flex;
   justify-content: space-between;
 }
-
-.salve-button {
-  color:#FFFFFF;
-  background-color: #0D6EFD;
-  cursor: pointer;
-}
-
-.button-disabled {
-  background-color: #ADB5BD;
-  cursor:not-allowed;
-}
-
-.message-error {
-  font-size: 12px;
-  color: red;
-  margin-bottom: 12px;
-}
-
-span {
-  font-size: 10px;
-  color: gray;
-}

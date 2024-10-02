@@ -2,48 +2,45 @@ import { Component, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { ContactService } from '../../services/contact.service';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { Interfaces } from '../../componentes/interfaces';
+import { RouterLink } from '@angular/router';
 
-interface Company {
-  companyName: string;
-  cpnj: number;
-  cep: number;
-  address: string;
-  neighborhood: string;
-  mobile: number;
-  adm: string;
-  cpf: number;
-  email: string;
-}
 
 @Component({
   selector: 'app-company-view',
   standalone: true,
   imports: [
     ContainerComponent,
-    FormsModule // Include FormsModule here
+    FormsModule,
+    RouterLink
   ],
   templateUrl: './company-view.component.html',
   styleUrls: ['./company-view.component.css']
 })
 export class CompanyViewComponent implements OnInit {
-  company: Company = {
-    companyName: '',
-    cpnj: 0,
-    cep: 0,
-    address: '',
-    neighborhood: '',
-    mobile: 0,
-    adm: '',
-    cpf: 0,
-    email: '',
-  };
+  public company: Interfaces = {
+      companyName: '',
+      cpnj: 0,
+      cep: 0,
+      address: '',
+      neighborhood: '',
+      mobile: 0,
+      adm: '',
+      cpf: 0,
+      email: '',
+      user: ''
+    };
   
   constructor(private companyService: ContactService) {}
 
   ngOnInit() {
+    // Pega os dados da empresa
     const companies = this.companyService.getCompany();
-    if (companies.length > 0) {
-      this.company = companies[0];
-    }
+    if (companies && companies.length > 0) {
+        this.company = companies[companies.length - 1]; // Pega o último item do array
+        console.log('Última empresa selecionada:', this.company);
+      } else {
+        console.log('Nenhuma empresa encontrada no localStorage.');
+      }
   }
 }

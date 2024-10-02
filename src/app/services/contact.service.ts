@@ -1,25 +1,12 @@
 import { Injectable } from '@angular/core';
-
-interface Company {
-  companyName: "string"
-  cpnj: number
-  cep: number
-  address: string
-  neighborhood: string
-  mobile: number
-  adm: string
-  cpf: number
-  email: string
-}
+import { Interfaces } from '../componentes/interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
-  private company: Company[] = [
-    {"companyName": "string","cpnj": 654654123154,"cep": 654654123154,"address": "string","neighborhood": "string","mobile": 654654123154,"adm": "string","cpf": 654654123154,"email": "asdf@asdf.com"}
-  ]
+  private company: Interfaces[] = []
 
   constructor() {
     const companyLocalStorageString = localStorage.getItem('companyLocal');
@@ -30,8 +17,18 @@ export class ContactService {
     localStorage.setItem('companyLocal', JSON.stringify(this.company));
   }
 
-  getCompany() {
+  getCompany(): Interfaces[] {
     return this.company;
+  }
+
+  saveUser(user: Interfaces) {
+    this.company.push(user);
+    localStorage.setItem('companyLocal', JSON.stringify(this.company));
+  }
+
+  saveCompany(user: Interfaces) {
+    this.company.push(user)
+    localStorage.setItem('companyLocal', JSON.stringify(this.company));
   }
 
 }

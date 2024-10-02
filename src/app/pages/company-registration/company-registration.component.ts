@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { ContactService } from '../../services/contact.service';
 
 @Component({
   selector: 'app-company-registration',
@@ -17,7 +19,7 @@ import { CommonModule } from '@angular/common';
 export class CompanyRegistrationComponent {
   formContact!: FormGroup;
 
-  constructor() {
+  constructor(private userService: ContactService, private router: Router) {
     this.formContact = new FormGroup({
       companyType: new FormControl(''),
       companyName: new FormControl('', Validators.required),
@@ -36,10 +38,18 @@ export class CompanyRegistrationComponent {
   }
 
   sendForm() {
+    const newCompany = this.formContact.value;
     if(this.formContact.valid){
-      console.log(this.formContact.value)
+      this.userService.saveUser(newCompany);
     } else {
       console.log('error')
     }
+    this.formContact.reset();
+    this.router.navigateByUrl('/configuracoes-empresa')
+  }
+
+  cancelForm() {
+    this.formContact.reset();
+    this.router.navigateByUrl('/cadastrar-usuario')
   }
 }

@@ -26,3 +26,21 @@ body {
   border: 1px solid #0D6EFD;
   cursor: pointer;
 }
+
+.salve-button, .create-account-button {
+  color:#FFFFFF;
+  background-color: #0D6EFD;
+  cursor: pointer;
+}
+
+.desabled-button {
+  color:gray;
+  border: 1px solid #ADB5BD;
+  background-color: #ADB5BD;
+  cursor:not-allowed;
+}
+
+span.message-error {
+  color: red;
+  font-size: 10px;
+}

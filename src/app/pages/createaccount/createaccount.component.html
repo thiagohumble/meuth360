@@ -1,29 +1,28 @@
 <app-container>
 	<header>
 		<section class="title">
-			Meu RH 360
+			<img src="assets/adicionar-contato.png" alt="">
 		</section>
 		<section class="contact">
-			<img src="assets/adicionar-contato.png" alt="">
 			<h1>Criar uma conta profissional</h1>
 			<div>Preencha seus dados para ter acesso</div>
 		</section>
 
 		<form [formGroup]="accountForm" (ngSubmit)="sendForm()">
-			<label for="name">Nome</label>
-			<input type="text" id="name" placeholder="Digite Nome" formControlName="name">
+			<label for="user">Nome</label>
+			<input type="text" id="name" placeholder="Digite Nome" formControlName="user">
 			<label for="email">Email</label>
 			<input type="text" id="email" placeholder="Digite Email" formControlName="email">
 			<label for="psw">Senha</label>
-			<input type="text" id="psw" placeholder="Digite uma senha" formControlName="psw">
+			<input type="password" id="psw" placeholder="Digite uma senha" formControlName="psw">
 			<label for="senha">Confirmação de Senha</label>
-			<input type="text" id="pswAgain" placeholder="Repita a Senha" formControlName="pswAgain">
+			<input type="password" id="pswAgain" placeholder="Repita a Senha" formControlName="pswAgain">
 			<div class="input-container">
-				<span class=""><input type="checkbox" name="termo" ></span>	 Eu aceito os Termos de uso e o Contrato		
+				<span class=""><input formControlName="accepted" type="checkbox" name="termo" ></span>	 Eu aceito os Termos de uso e o Contrato		
 			</div>
 
 			<section class="buttons">
-				<button type="submit" class="button">
+				<button type="submit" class="button" [disabled]="accountForm.invalid" [ngClass]="accountForm.valid ? 'create-account-button' : 'desabled-button'">
 					Criar Conta
 				</button>
 			</section>

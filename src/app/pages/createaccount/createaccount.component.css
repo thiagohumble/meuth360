@@ -110,17 +110,6 @@ input:focus {
   justify-content: space-between;
 }
 
-.salve-button {
-  color:#FFFFFF;
-  background-color: #0D6EFD;
-  cursor: pointer;
-}
-
-.desabled-button {
-  background-color: #ADB5BD;
-  cursor:not-allowed;
-}
-
 .message-error {
   font-size: 16px;
   color: red;
