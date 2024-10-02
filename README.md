@@ -6,8 +6,6 @@
 ### Badges
 ![image](https://github.com/user-attachments/assets/8fb16a26-7e1f-4e11-994d-99e5527c73a9)
 
-
-
 ### Índice
 * **Descrição**
 * **Funcionalidades**
@@ -30,19 +28,20 @@ Meu RH360 é um sistema web completo para gestão de recursos humanos, desenvolv
 
 ### Instalação
 1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/thiagohumble/meuth360.git
+  ```bash
+  git clone https://github.com/thiagohumble/meuth360.git
 
 2. **No terminal rodar:**
-   ```bash
-     npm install
+  ```bash
+  npm install
 
 4. **Rodar Projeto**
-   ```bash
-     ng serve ou npm start
+  ```bash
+  ng serve ou npm start
 
 ### Pré requisitos nodejs 18+, Angular CLI   
   ```bash
-    npm install -g @angular/cli
-    npm install nodejs
+  npm install -g @angular/cli
+  ```bash
+  npm install nodejs
 
