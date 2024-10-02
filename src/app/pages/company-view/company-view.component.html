@@ -4,24 +4,32 @@
 			<< Voltar
 		</button>
 	</div>
-	<label for="companyName">Nome da Empresa</label>
-	<input type="text" id="companyName" placeholder="" >
-	<label for="cpnj">CNPJ</label>
-	<input type="text" id="cpnj" placeholder="" >
-	<label for="cep">Cep</label>
-	<input type="text" id="cep" placeholder="" >
-	<label for="address">Endereço</label>
-	<input type="text" id="address" placeholder="" >
-	<label for="neighborhood">Bairro</label>
-	<input type="text" id="neighborhood" placeholder="" >
-	<label for="complement">complemento</label>
-	<input type="text" id="complement" placeholder="" >
-	<label for="mobile">Celular</label>
-	<input type="text" id="mobile" placeholder="" >
-	<label for="adm">Administrador</label>
-	<input type="text" id="adm" placeholder="" >
-	<label for="cpf">CPF</label>
-	<input type="text" id="cpf" placeholder="" >
-	<label for="email">E-mail</label>
-	<input type="text" id="email" placeholder="" >
+	<form>
+	  <label for="companyName">Nome da Empresa</label>
+	  <input id="companyName" [(ngModel)]="company.companyName" name="companyName" />
+
+	  <label for="cpnj">CNPJ</label>
+	  <input id="cpnj" [(ngModel)]="company.cpnj" name="cpnj" type="number" />
+
+	  <label for="cep">Cep</label>
+	  <input id="cep" [(ngModel)]="company.cep" name="cep" type="number" />
+
+	  <label for="address">Endereço</label>
+	  <input id="address" [(ngModel)]="company.address" name="address" />
+
+	  <label for="neighborhood">Bairro</label>
+	  <input id="neighborhood" [(ngModel)]="company.neighborhood" name="neighborhood" />
+
+	  <label for="mobile">Celular</label>
+	  <input id="mobile" [(ngModel)]="company.mobile" name="mobile" type="number" />
+
+	  <label for="adm">Administrador</label>
+	  <input id="adm" [(ngModel)]="company.adm" name="adm" />
+
+	  <label for="cpf">CPF</label>
+	  <input id="cpf" [(ngModel)]="company.cpf" name="cpf" type="number" />
+
+	  <label for="email">E-mail</label>
+	  <input id="email" [(ngModel)]="company.email" name="email" type="email" />
+	</form>
 </app-container>
