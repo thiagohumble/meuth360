@@ -13,19 +13,15 @@
 * **Funcionalidades**
 * **Tecnologias**
 * **Instalação**
-* **Contribuição**
-* **Licença**
-* **Equipe**
 
 ### Descrição
 Meu RH360 é um sistema web completo para gestão de recursos humanos, desenvolvido com o objetivo de otimizar os processos de recrutamento, seleção, treinamento e desenvolvimento de talentos.
 
 ### Funcionalidades
-* Cadastro e gestão de funcionários
-* Módulo de recrutamento e seleção
-* Gerenciamento de benefícios
-* Folha de pagamento
-* Relatórios personalizados
+* Criar conta usuário ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
+* Tela de boas vindas ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
+* Cadatro de empresa matriz ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
+* Gerenciamento da empresa ![Coverage](https://img.shields.io/badge/coverage-70%25-brightgreen)
 
 ### Tecnologias
 * **Frontend:** angular
