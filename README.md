@@ -41,7 +41,7 @@ Meu RH360 é um sistema web completo para gestão de recursos humanos, desenvolv
    ```bash
      ng serve ou npm start
 
-### Pré requisitos nodejs 18+, Angular CLI instalados 
+### Pré requisitos nodejs 18+, Angular CLI   
   ```bash
     npm install -g @angular/cli
     npm install nodejs
