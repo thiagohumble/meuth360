@@ -17,10 +17,10 @@ export class CreateaccountComponent {
 
   constructor() {
     this.accountForm = new FormGroup({
-      name: new FormControl('Thiago'),
-      email: new FormControl('thg.humble@gmail.com'),
-      psw: new FormControl('Thiago'),
-      pswAgain: new FormControl('Thiago')
+      name: new FormControl(''),
+      email: new FormControl(''),
+      psw: new FormControl(''),
+      pswAgain: new FormControl('')
     })
   }
 
