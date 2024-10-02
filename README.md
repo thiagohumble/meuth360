@@ -3,10 +3,12 @@
 
 [Image of your application]
 
+[ ![Coverage](https://img.shields.io/badge/coverage-70%25-brightgreen)]
+
 ### Badges
 ![image](https://github.com/user-attachments/assets/8fb16a26-7e1f-4e11-994d-99e5527c73a9)
 
-[ ![Coverage](https://img.shields.io/badge/coverage-70%25-brightgreen)]
+
 
 ### Índice
 * **Descrição**
