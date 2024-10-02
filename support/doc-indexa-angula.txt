@@ -1,0 +1,43 @@
+Alura: Angular: construa uma aplicação web
+https://cursos.alura.com.br/course/angular-aplicacao-web-componentes-linguagem-template-cli/task/147540
+
+> Projeto com Angular:
+	https://cursos.alura.com.br/course/angular-aplicacao-web-componentes-linguagem-template-cli/task/147543
+	Install:
+		nodejs: sudo apt update /	sudo apt install nodejs
+		Angular: npm install -g @angular/cli@17.0.3 (instala global)
+		Cria projeto: ng new indexa (indexa é o nome do projeto a pasta que será criado)
+	Run serve:
+		sudo apt install ng-common (caso ng serve não rode de primeira)
+		ng serve
+
+> Rodar projeto (entrar na pasta que criou no caso esse indexa)
+	Iniciar servidor: ng serve
+
+> Criar componente
+	ng generate component componentes/container
+		> app.component.ts
+			imports: novo componente
+		> usar componente
+			no app.component.html que é o componente principal eu uso 
+			<app-container> conteúdo </app-container> 
+
+Figma:
+	https://www.figma.com/design/uXjoavDEvDjyE8LsXgliGx/Indexa-%7C-Angular---Primeiros-Passos?node-id=56-151029
+
+Angular CLI
+	https://angular.dev/tools/cli/setup-local
+
+cd /Estudo/Alura/frameworksLibrary/Angular/indexa
+
+> TAGS angular
+	> <ng-content></ng-content>
+		usar o conteúdo do componente
+
+
+
+
+---------PREPARANDO AMBIENTE
+json: https://raw.githubusercontent.com/alura-cursos/3495-indexa/aula-5/src/app/agenda.json
+imagens: https://github.com/alura-cursos/3495-indexa/raw/aula-5/src/assets/Archive.zip
+figma: https://www.figma.com/community/file/1412829189348055664/angular-construa-uma-aplicacao-web-com-componentes-linguagem-de-template-e-cli-indexa
