@@ -28,10 +28,6 @@ Meu RH360 é um sistema web completo para gestão de recursos humanos, desenvolv
 * **Backend:** Node.js
 * **Cloud:** localstorage
 
-### Pré requisitos nodejs 18+, Angular CLI instalados 
-  ```bash
-    npm install -g @angular/cli
-
 ### Instalação
 1. **Clone o repositório:**
    ```bash
@@ -44,3 +40,9 @@ Meu RH360 é um sistema web completo para gestão de recursos humanos, desenvolv
 4. **Rodar Projeto**
    ```bash
      ng serve ou npm start
+
+### Pré requisitos nodejs 18+, Angular CLI instalados 
+  ```bash
+    npm install -g @angular/cli
+    npm install nodejs
+
