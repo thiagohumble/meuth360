@@ -36,5 +36,7 @@ Meu RH360 é um sistema web completo para gestão de recursos humanos, desenvolv
 1. **Clone o repositório:**
    ```bash
    git clone [URL inválido removido](https://github.com/thiagohumble/meuth360.git)]
-2. **npm install** 
+
+2. **No terminal rodar** 
   ```bash
+  npm install
