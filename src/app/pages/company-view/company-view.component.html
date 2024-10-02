@@ -7,7 +7,8 @@
 	</div>
 	<form>
 	  <label for="companyName">Nome da Empresa</label>
-	  <input disabled id="companyName" [(ngModel)]="company.companyName" name="companyName" />
+	  <!-- Esta diretiva Angular [(ngModel)] realiza a vinculação bidirecional entre o campo de entrada e a propriedade companyName -->
+	  <input disabled id="companyName" [(ngModel)]="company.companyName" name="companyName" /> 
 
 	  <label for="cpnj">CNPJ</label>
 	  <input disabled id="cpnj" [(ngModel)]="company.cpnj" name="cpnj" type="number" />

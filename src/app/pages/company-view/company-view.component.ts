@@ -18,6 +18,7 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./company-view.component.css']
 })
 export class CompanyViewComponent implements OnInit {
+  // Define uma interface para representar os dados de uma empresa
   public company: Interfaces = {
       companyName: '',
       cpnj: 0,
@@ -34,11 +35,12 @@ export class CompanyViewComponent implements OnInit {
   constructor(private companyService: ContactService) {}
 
   ngOnInit() {
-    // Pega os dados da empresa
+    // Quando o componente é inicializado, busca os dados da empresa
     const companies = this.companyService.getCompany();
+
+    // Verifica se tem empresas e atribui a última empresa encontrada à propriedade 'company'
     if (companies && companies.length > 0) {
         this.company = companies[companies.length - 1]; // Pega o último item do array
-        console.log('Última empresa selecionada:', this.company);
       } else {
         console.log('Nenhuma empresa encontrada no localStorage.');
       }

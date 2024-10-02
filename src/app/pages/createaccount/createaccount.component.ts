@@ -19,10 +19,12 @@ import { NgClass } from '@angular/common';
 export class CreateaccountComponent implements OnInit {
   accountForm!: FormGroup;
 
+// Inicializa o formulário
   ngOnInit() {
     this.initForm();
   }
 
+// Cria um novo FormGroup com os seguintes controles user, email, psw... 
   initForm() {
     this.accountForm = new FormGroup({
       user: new FormControl(''),

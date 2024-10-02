@@ -20,10 +20,10 @@ export class WellcomeComponent implements OnInit {
 
 public userFirstName: string = ''; 
 
-constructor (private companyServices: ContactService){}
+constructor (private companyServices: ContactService){} 
 
 ngOnInit(): void {
-    const users =  this.companyServices.getCompany();
+    const users =  this.companyServices.getCompany(); // obtendo os dados comunicação com o serviço
     if (users.length > 0) {
       this.userFirstName = users[users.length - 1].user.split(' ')[0];
     }
