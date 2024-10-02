@@ -5,7 +5,7 @@
 
 ### Badges
 [Insira aqui os badges relevantes, como cobertura de testes, build status, etc.]
-[Exemplo: ![Coverage](https://img.shields.io/badge/coverage-90%25-brightgreen)]
+[ ![Coverage](https://img.shields.io/badge/coverage-70%25-brightgreen)]
 
 ### Índice
 * **Descrição**
