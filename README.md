@@ -30,18 +30,19 @@ Meu RH360 é um sistema web completo para gestão de recursos humanos, desenvolv
 1. **Clone o repositório:**
   ```bash
   git clone https://github.com/thiagohumble/meuth360.git
-
+  ```
 2. **No terminal rodar:**
   ```bash
   npm install
-
+  ```
 4. **Rodar Projeto**
   ```bash
   ng serve ou npm start
-
+  ```
 ### Pré requisitos nodejs 18+, Angular CLI   
   ```bash
   npm install -g @angular/cli
+  ```
   ```bash
   npm install nodejs
-
+  ```
