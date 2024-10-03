@@ -46,3 +46,5 @@ Meu RH360 é um sistema web completo para gestão de recursos humanos, desenvolv
   ```bash
   npm install nodejs
   ```
+
+<sup> Feito com 💙 pelo @thiagohumble e acesse <a href="https://humbletrips.com.br/" target="_blank" rel="noopener">humbletrips</a> ® 2024</sup>
